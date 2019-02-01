@@ -49,3 +49,11 @@ def meeting(s):
             meeting += "({0}, {1})".format(lastName, firstName)    # concatenate every full name into meeting string
     
     return meeting
+
+# I looked up the solutions and found an elegant solution too:
+
+def meeting(s):
+    return ''.join(sorted('({1}, {0})'.format(*(x.split(':'))) for x in s.upper().split(';')))
+
+# Basically it loops through all the full names in upper forms, then for every element in splitted full name which
+# is first name and last name it formats the string and joins the sorted ones.
