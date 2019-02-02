@@ -43,3 +43,11 @@ def comp(array1, array2):
 # Secondly, I made a list comprehension of squares of numbers in array1 and sort them. It is a list of squared number and
 # it should be equal to the array2 without considering the order of elements. That is why I sorted both of them
 # and checked whether they are equal or not.
+
+# We can also do this with try, except method, like this:
+
+def comp(array1, array2):
+    try:
+        return sorted(num**2 for num in array1) == sorted(array2)
+    except:
+        return False
