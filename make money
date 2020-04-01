@@ -1,0 +1,2 @@
+def make_money(much):
+  return f'You have {much} money'
